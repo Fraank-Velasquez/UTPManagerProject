@@ -1,0 +1,568 @@
+<div class="d-flex justify-content-between align-items-center mb-3 mt-2">
+    <h2 class="fw-bold h3 mb-0">Todas mis Tareas</h2>
+
+    <div class="d-flex gap-2 align-items-center">
+        <div class="input-group input-group-sm bg-white rounded-pill border px-2 py-1 shadow-sm"
+            style="max-width: 250px;">
+            <span class="input-group-text bg-transparent border-0 text-muted pe-1"><i class="bi bi-search"></i></span>
+            <input type="text" class="form-control border-0 shadow-none bg-transparent" placeholder="Buscar...">
+        </div>
+        <button
+            class="btn bg-white border shadow-sm btn-sm px-3 py-1 rounded-pill d-flex align-items-center gap-2 text-dark fw-medium">
+            <i class="bi bi-sliders text-muted"></i> Filtrar
+        </button>
+    </div>
+</div>
+
+<div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+    <ul class="nav nav-pills d-flex gap-2 mb-0" id="misTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link btn-tab active btn-sm rounded-pill px-4" data-bs-toggle="pill"
+                data-bs-target="#content-todas" type="button" role="tab">Todas (11)</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link btn-tab btn-sm rounded-pill px-3" data-bs-toggle="pill"
+                data-bs-target="#content-hacer" type="button" role="tab"><i class="bi bi-sun me-1"></i> Por Hacer (6)</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link btn-tab btn-sm rounded-pill px-3" data-bs-toggle="pill"
+                data-bs-target="#content-progreso" type="button" role="tab"><i class="bi bi-sun me-1"></i> En Progreso (3)</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link btn-tab btn-sm rounded-pill px-3" data-bs-toggle="pill"
+                data-bs-target="#content-completadas" type="button" role="tab"><i class="bi bi-check-circle me-1"></i> Completadas (2)</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link btn-tab btn-sm rounded-pill px-3 text-danger" style="background:#fee2e2; border-color:#fca5a5;" data-bs-toggle="pill" data-bs-target="#content-retrasadas" type="button" role="tab"><i class="bi bi-exclamation-triangle me-1"></i> Retrasadas (0)</button>
+        </li>
+    </ul>
+    <button class="btn btn-primary btn-sm px-4 py-2 rounded-pill fw-medium" data-bs-toggle="modal"
+        data-bs-target="#modalCrearTarea">
+        <i class="bi bi-plus-lg me-1"></i> Crear tarea
+    </button>
+</div>
+
+<div class="tab-content flex-grow-1" id="misTabsContent">
+    <div class="tab-pane fade show active" id="content-todas" role="tabpanel">
+            <h5 class="fw-bold mb-3 fs-6">Prioridad Alta (3)</h5>
+            <div class="row row-cols-1 row-cols-lg-3 g-3 mb-4">
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Configurar Base de Datos</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Backend API</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Crear esquema PostgreSQL local.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#103</span>
+                        <span class="badge rounded-1 bg-danger text-white px-2 py-1">Alta</span>
+                        <span class="badge rounded-1 bg-danger-subtle text-danger px-2 py-1">20/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Diseñar Wireframes</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Frontend UI</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Definir pantallas en Figma corporativo.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#102</span>
+                        <span class="badge rounded-1 bg-danger text-white px-2 py-1">Alta</span>
+                        <span class="badge rounded-1 bg-danger-subtle text-danger px-2 py-1">20/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Conectar API Rest</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Frontend API</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Hacer llamadas HTTP con fetch para datos.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#103</span>
+                        <span class="badge rounded-1 bg-danger text-white px-2 py-1">Alta</span>
+                        <span class="badge rounded-1 bg-danger-subtle text-danger px-2 py-1">20/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            </div>
+            <h5 class="fw-bold mb-3 fs-6">Prioridad Media (5)</h5>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-xl-5 g-3 mb-4">
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Estilizar Componentes</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Design System</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Ajustar padding y colores en botones.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#001</span>
+                        <span class="badge rounded-1 bg-warning text-dark px-2 py-1">Media</span>
+                        <span class="badge rounded-1 bg-warning-subtle text-dark px-2 py-1">15/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Validar Formularios</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Backend API</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Evitar inyección SQL y correos inválidos.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#002</span>
+                        <span class="badge rounded-1 bg-warning text-dark px-2 py-1">Media</span>
+                        <span class="badge rounded-1 bg-warning-subtle text-dark px-2 py-1">15/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Programar Menú Lateral</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Frontend UI</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Lógica en JS para contraer el menú con animaciones suaves.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#003</span>
+                        <span class="badge rounded-1 bg-warning text-dark px-2 py-1">Media</span>
+                        <span class="badge rounded-1 bg-warning-subtle text-dark px-2 py-1">15/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Adaptar UI Móviles</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Frontend UI</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Usar media queries para tablas en móvil.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#004</span>
+                        <span class="badge rounded-1 bg-warning text-dark px-2 py-1">Media</span>
+                        <span class="badge rounded-1 bg-warning-subtle text-dark px-2 py-1">15/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Optimizar Imágenes Web</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Frontend UI</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Pasar archivos pesados a WebP para carga.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#005</span>
+                        <span class="badge rounded-1 bg-warning text-dark px-2 py-1">Media</span>
+                        <span class="badge rounded-1 bg-warning-subtle text-dark px-2 py-1">15/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            </div>
+            <h5 class="fw-bold mb-3 fs-6">Prioridad Baja (2)</h5>
+            <div class="row row-cols-1 row-cols-lg-3 g-3 mb-4">
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Ajustar Tema Oscuro</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Design System</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Comprobar contraste para accesibilidad.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#003</span>
+                        <span class="badge rounded-1 text-success px-2 py-1" style="background-color: #a3d9b1;">Baja</span>
+                        <span class="badge rounded-1 bg-success-subtle text-success px-2 py-1">20/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Subir Assets al Host</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">DevOps Cloud</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Minificar estilos en carpeta hosting.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#002</span>
+                        <span class="badge rounded-1 text-success px-2 py-1" style="background-color: #a3d9b1;">Baja</span>
+                        <span class="badge rounded-1 bg-success-subtle text-success px-2 py-1">20/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Revisar Enlaces Rotos</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">QA Testing</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Verificar botones muertos en el footer.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#003</span>
+                        <span class="badge rounded-1 text-success px-2 py-1" style="background-color: #a3d9b1;">Baja</span>
+                        <span class="badge rounded-1 bg-success-subtle text-success px-2 py-1">20/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            </div>
+    </div>
+    <div class="tab-pane fade" id="content-hacer" role="tabpanel">
+        <h5 class="fw-bold mb-3 fs-6">Tareas Por Hacer (6)</h5>
+        <div class="row row-cols-1 row-cols-lg-3 g-3 mb-4">
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Configurar Base de Datos</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Backend API</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Crear esquema PostgreSQL local.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#103</span>
+                        <span class="badge rounded-1 bg-danger text-white px-2 py-1">Alta</span>
+                        <span class="badge rounded-1 bg-danger-subtle text-danger px-2 py-1">20/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Conectar API Rest</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Frontend API</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Hacer llamadas HTTP con fetch para datos.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#103</span>
+                        <span class="badge rounded-1 bg-danger text-white px-2 py-1">Alta</span>
+                        <span class="badge rounded-1 bg-danger-subtle text-danger px-2 py-1">20/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Programar Menú Lateral</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Frontend UI</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Lógica en JS para contraer el menú con animaciones suaves.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#003</span>
+                        <span class="badge rounded-1 bg-warning text-dark px-2 py-1">Media</span>
+                        <span class="badge rounded-1 bg-warning-subtle text-dark px-2 py-1">15/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Adaptar UI Móviles</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Frontend UI</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Usar media queries para tablas en móvil.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#004</span>
+                        <span class="badge rounded-1 bg-warning text-dark px-2 py-1">Media</span>
+                        <span class="badge rounded-1 bg-warning-subtle text-dark px-2 py-1">15/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Optimizar Imágenes Web</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Frontend UI</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Pasar archivos pesados a WebP para carga.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#005</span>
+                        <span class="badge rounded-1 bg-warning text-dark px-2 py-1">Media</span>
+                        <span class="badge rounded-1 bg-warning-subtle text-dark px-2 py-1">15/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Revisar Enlaces Rotos</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">QA Testing</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Verificar botones muertos en el footer.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#003</span>
+                        <span class="badge rounded-1 text-success px-2 py-1" style="background-color: #a3d9b1;">Baja</span>
+                        <span class="badge rounded-1 bg-success-subtle text-success px-2 py-1">20/08/2026</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="content-progreso" role="tabpanel">
+        <h5 class="fw-bold mb-3 fs-6">Tareas En Progreso (3)</h5>
+        <div class="row row-cols-1 row-cols-lg-3 g-3 mb-4">
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Diseñar Wireframes</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Frontend UI</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Definir pantallas en Figma corporativo.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#102</span>
+                        <span class="badge rounded-1 bg-danger text-white px-2 py-1">Alta</span>
+                        <span class="badge rounded-1 bg-danger-subtle text-danger px-2 py-1">20/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Estilizar Componentes</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Design System</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Ajustar padding y colores en botones.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#001</span>
+                        <span class="badge rounded-1 bg-warning text-dark px-2 py-1">Media</span>
+                        <span class="badge rounded-1 bg-warning-subtle text-dark px-2 py-1">15/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" >
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Validar Formularios</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Backend API</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Evitar inyección SQL y correos inválidos.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#002</span>
+                        <span class="badge rounded-1 bg-warning text-dark px-2 py-1">Media</span>
+                        <span class="badge rounded-1 bg-warning-subtle text-dark px-2 py-1">15/08/2026</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="content-completadas" role="tabpanel">
+        <h5 class="fw-bold mb-3 fs-6">Tareas Completadas (2)</h5>
+        <div class="row row-cols-1 row-cols-lg-3 g-3 mb-4">
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" checked>
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Ajustar Tema Oscuro</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">Design System</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Comprobar contraste para accesibilidad.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#003</span>
+                        <span class="badge rounded-1 text-success px-2 py-1" style="background-color: #a3d9b1;">Baja</span>
+                        <span class="badge rounded-1 bg-success-subtle text-success px-2 py-1">20/08/2026</span>
+                    </div>
+                </article>
+            </div>
+            <div class="col">
+                <article class="card border border-light-subtle shadow-sm rounded-3 p-3 bg-white h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-1">
+                        <div class="d-flex gap-2">
+                            <input class="form-check-input mt-1 border-secondary-subtle shadow-none" type="checkbox" checked>
+                            <div class="lh-sm">
+                                <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.9rem;">Subir Assets al Host</h6>
+                                <span class="text-dark fw-bold" style="font-size: 0.75rem;">DevOps Cloud</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-up text-muted" style="font-size: 0.8rem; cursor:pointer;"></i>
+                    </div>
+                    <p class="text-secondary mb-3 mt-2 lh-sm text-truncate" style="font-size: 0.75rem;">Minificar estilos en carpeta hosting.</p>
+                    <div class="d-flex gap-2 mt-auto">
+                        <span class="badge rounded-1 bg-light text-secondary border px-2 py-1">#002</span>
+                        <span class="badge rounded-1 text-success px-2 py-1" style="background-color: #a3d9b1;">Baja</span>
+                        <span class="badge rounded-1 bg-success-subtle text-success px-2 py-1">20/08/2026</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="content-retrasadas" role="tabpanel">
+        <div class="p-5 mt-5 text-center text-danger">
+            <i class="bi bi-exclamation-triangle mb-3 opacity-50" style="font-size: 4rem;"></i>
+            <h5 class="fw-bold">Tareas Retrasadas</h5>
+            <p>Sin tareas retrasadas. ¡Excelente trabajo!</p>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalCrearTarea" tabindex="-1" aria-labelledby="modalCrearTareaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border-0 shadow">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h1 class="modal-title fs-5 fw-bold" id="modalCrearTareaLabel">Nueva Tarea</h1>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formCrearTarea">
+                    <div class="mb-3 form-floating">
+                        <input type="text" class="form-control shadow-none rounded-3" id="tareaTitulo"
+                            placeholder="Ej: Aprender Bootstrap" required>
+                        <label for="tareaTitulo">Título de la tarea</label>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <input type="text" class="form-control shadow-none rounded-3" id="tareaProyecto"
+                            placeholder="Ej: Proyecto Alpha" required>
+                        <label for="tareaProyecto">Proyecto</label>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <textarea class="form-control shadow-none rounded-3" id="tareaDesc"
+                            placeholder="Descripción breve" style="height: 80px"></textarea>
+                        <label for="tareaDesc">Descripción (opcional)</label>
+                    </div>
+                    <div class="row g-2 mb-3">
+                        <div class="col-6 form-floating">
+                            <select class="form-select shadow-none rounded-3" id="tareaPrioridad">
+                                <option value="Alta">Alta</option>
+                                <option value="Media" selected>Media</option>
+                                <option value="Baja">Baja</option>
+                            </select>
+                            <label for="tareaPrioridad">Prioridad</label>
+                        </div>
+                        <div class="col-6 form-floating">
+                            <input type="date" class="form-control shadow-none rounded-3" id="tareaFecha" required>
+                            <label for="tareaFecha">Fecha límite</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer border-top-0 pt-0">
+                <button type="button" class="btn btn-light rounded-pill px-4" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" form="formCrearTarea" class="btn btn-primary rounded-pill px-4">Guardar
+                    Tarea</button>
+            </div>
+        </div>
+    </div>
+</div>

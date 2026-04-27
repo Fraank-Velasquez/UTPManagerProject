@@ -1,0 +1,193 @@
+<div class="projects-header">
+    <div class="project-tabs" id="contenedor-pestanas-proyectos">
+        <button class="tab-btn active">Proyecto x</button>
+        <button class="tab-btn">Proyecto y</button>
+        <button class="tab-btn">Proyecto z</button>
+        <button class="tab-btn" id="btnNuevoProyecto" data-bs-toggle="modal" data-bs-target="#modalCrearProyecto"><i
+                class="bi bi-plus-lg"></i></button>
+    </div>
+    <div class="search-filter-container">
+        <div class="search-box">
+            <i class="bi bi-search text-muted"></i>
+            <input type="text" placeholder="Buscar...">
+        </div>
+        <button class="btn-filter"><i class="bi bi-sliders"></i> Filtrar</button>
+    </div>
+</div>
+
+<div id="estado-vacio-proyecto" style="display: none; width: 100%; justify-content: center;">
+    <div class="p-5 mt-5 text-center text-muted">
+        <i class="bi bi-kanban mb-3 opacity-50" style="font-size: 4rem;"></i>
+        <h5 class="fw-bold">Proyecto: <span id="titulo-estado-vacio">Nuevo</span></h5>
+        <p>Aún no hay tareas en este proyecto. ¡Haz clic en el botón para empezar!</p>
+        <button class="btn btn-primary btn-sm px-4 py-2 rounded-pill mt-3" data-bs-toggle="modal"
+            data-bs-target="#modalCrearTareaProyecto">
+            <i class="bi bi-plus-lg me-1"></i> Crear primera tarea
+        </button>
+    </div>
+</div>
+
+<div class="kanban-board" id="tablero-kanban-activo">
+    <div class="kanban-column">
+        <div class="column-header header-todo"><i class="bi bi-sun"></i> Por Hacer</div>
+        <button class="btn-create-task"><i class="bi bi-plus-lg text-white bg-primary rounded px-1"></i> Crear
+            tarea</button>
+
+        <div class="task-card" data-proyecto="Proyecto x">
+            <div class="d-flex justify-content-between">
+                <div class="task-title-group">
+                    <i class="bi bi-square task-checkbox"></i>
+                    <div>
+                        <h6 class="task-title">Tarea x - tarea x</h6>
+                        <p class="task-desc">Lorem ipsum doloramus vulputate...</p>
+                    </div>
+                </div>
+                <div class="task-arrows">
+                    <i class="bi bi-arrow-right fs-5 text-primary cursor-pointer btn-mover" title="Avanzar etapa"></i>
+                </div>
+            </div>
+            <div class="task-tags">
+                <span class="custom-badge badge-id">#001</span>
+                <span class="custom-badge badge-prio-green">Prioridad</span>
+                <span class="custom-badge badge-date-red"><i class="bi bi-calendar"></i> 15/08/2026</span>
+            </div>
+        </div>
+
+        <div class="task-card" data-proyecto="Proyecto x">
+            <div class="d-flex justify-content-between">
+                <div class="task-title-group">
+                    <i class="bi bi-square task-checkbox"></i>
+                    <div>
+                        <h6 class="task-title">Tarea y - tarea y</h6>
+                        <p class="task-desc">Lorem ipsum doloramus vulputate...</p>
+                    </div>
+                </div>
+                <div class="task-arrows">
+                    <i class="bi bi-arrow-right fs-5 text-primary cursor-pointer btn-mover" title="Avanzar etapa"></i>
+                </div>
+            </div>
+            <div class="task-tags">
+                <span class="custom-badge badge-id">#002</span>
+                <span class="custom-badge badge-prio-blue">Prioridad</span>
+                <span class="custom-badge badge-date-red"><i class="bi bi-calendar"></i> 15/08/2026</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="kanban-column">
+        <div class="column-header header-progress"><i class="bi bi-brightness-high"></i> En Progreso</div>
+        <button class="btn-create-task"><i class="bi bi-plus-lg text-white bg-primary rounded px-1"></i> Crear
+            tarea</button>
+
+        <div class="task-card" data-proyecto="Proyecto x">
+            <div class="d-flex justify-content-between">
+                <div class="task-title-group">
+                    <i class="bi bi-square task-checkbox"></i>
+                    <div>
+                        <h6 class="task-title">Tarea x - tarea x</h6>
+                        <p class="task-desc">Lorem ipsum doloramus vulputate...</p>
+                    </div>
+                </div>
+                <div class="task-arrows">
+                    <i class="bi bi-arrow-right fs-5 text-primary cursor-pointer btn-mover" title="Avanzar etapa"></i>
+                </div>
+            </div>
+            <div class="task-tags">
+                <span class="custom-badge badge-id">#001</span>
+                <span class="custom-badge badge-prio-green">Prioridad</span>
+                <span class="custom-badge badge-date-orange" style="background-color: #fff3cd; color: #664d03;"><i
+                        class="bi bi-calendar"></i> 15/08/2026</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="kanban-column">
+        <div class="column-header header-done"><i class="bi bi-check-circle"></i> Completadas</div>
+
+        <div class="task-card done" data-proyecto="Proyecto x">
+            <div class="d-flex justify-content-between">
+                <div class="task-title-group">
+                    <i class="bi bi-check-square-fill task-checkbox"></i>
+                    <div>
+                        <h6 class="task-title">Tarea A - tarea A</h6>
+                        <p class="task-desc">Lorem ipsum doloramus vulputate...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="task-tags">
+                <span class="custom-badge badge-id">#001</span>
+                <span class="custom-badge badge-prio-green">Prioridad</span>
+                <span class="custom-badge badge-date-red"><i class="bi bi-calendar"></i> 15/08/2026</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalCrearProyecto" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content rounded-4 border-0 shadow">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h1 class="modal-title fs-5 fw-bold">Nuevo Proyecto</h1>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formCrearProyecto">
+                    <div class="mb-3 form-floating">
+                        <input type="text" class="form-control shadow-none rounded-3" id="nuevoNombreProyecto"
+                            placeholder="Nombre del Proyecto" required>
+                        <label for="nuevoNombreProyecto">Nombre del Proyecto</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer border-top-0 pt-0">
+                <button type="button" class="btn btn-light rounded-pill px-4" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" form="formCrearProyecto" class="btn btn-dark rounded-pill px-4">Crear</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalCrearTareaProyecto" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border-0 shadow">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h1 class="modal-title fs-5 fw-bold">Nuevo</h1>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formCrearTareaProyecto">
+                    <div class="mb-3 form-floating">
+                        <input type="text" class="form-control shadow-none rounded-3" id="proyectoTareaTitulo"
+                            placeholder="Ej: Diseñar Base de Datos" required>
+                        <label for="proyectoTareaTitulo">Título de la tarea</label>
+                    </div>
+                    <div class="mb-3 form-floating">
+                        <textarea class="form-control shadow-none rounded-3" id="proyectoTareaDesc"
+                            placeholder="Descripción breve" style="height: 80px"></textarea>
+                        <label for="proyectoTareaDesc">Descripción (opcional)</label>
+                    </div>
+                    <div class="row g-2 mb-3">
+                        <div class="col-6 form-floating">
+                            <select class="form-select shadow-none rounded-3" id="proyectoTareaPrioridad">
+                                <option value="Alta">Alta</option>
+                                <option value="Media" selected>Media</option>
+                                <option value="Baja">Baja</option>
+                            </select>
+                            <label for="proyectoTareaPrioridad">Prioridad</label>
+                        </div>
+                        <div class="col-6 form-floating">
+                            <input type="date" class="form-control shadow-none rounded-3" id="proyectoTareaFecha"
+                                required>
+                            <label for="proyectoTareaFecha">Fecha límite</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer border-top-0 pt-0">
+                <button type="button" class="btn btn-light rounded-pill px-4" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" form="formCrearTareaProyecto" class="btn btn-primary rounded-pill px-4">Agregar
+                    Tarjeta</button>
+            </div>
+        </div>
+    </div>
+</div>
